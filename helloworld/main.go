@@ -17,7 +17,7 @@ func trigger() error {
 	fmt.Println("Generating events to trigger the probes ...")
 	// Creating a tmp directory to trigger the probes
 	tmpDir := "/tmp/test_folder"
-	fmt.Printf("creating %v", tmpDir)
+	fmt.Printf("creating %v\n", tmpDir)
 	err := os.MkdirAll(tmpDir, 0666)
 	if err != nil {
 		return err
@@ -27,7 +27,7 @@ func trigger() error {
 	time.Sleep(500 * time.Millisecond)
 
 	// Removing a tmp directory to trigger the probes
-	fmt.Printf("removing %s", tmpDir)
+	fmt.Printf("removing %s\n", tmpDir)
 	err = os.RemoveAll(tmpDir)
 	if err != nil {
 		return err

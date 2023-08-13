@@ -1,7 +1,6 @@
-all: build-ebpf build run
+all: build-ebpf build
 
 build-ebpf:
-	mkdir -p ebpf/bin
 	clang -D__KERNEL__ -D__ASM_SYSREG_H \
 		-Wno-unused-value \
 		-Wno-pointer-sign \
@@ -18,7 +17,6 @@ build-ebpf:
 		-O2 -emit-llvm \
 		ebpf/main.c \
 		-c -o - | llc -march=bpf -filetype=obj -o ebpf/bin/probe.o
-	#go run github.com/shuLhan/go-bindata/cmd/go-bindata -pkg main -prefix "ebpf/bin" -o "probe.go" "ebpf/bin/probe.o"
 
 build:
 	go build -o bin/main .
