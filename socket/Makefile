@@ -1,6 +1,6 @@
 all: build-ebpf build
 
-build-ebpf:
+build-ebpf: dir
 	clang -D__KERNEL__ -D__ASM_SYSREG_H \
 		-Wno-unused-value \
 		-Wno-pointer-sign \
@@ -17,6 +17,9 @@ build-ebpf:
 		-O2 -emit-llvm \
 		ebpf/main.c \
 		-c -o - | llc -march=bpf -filetype=obj -o ebpf/bin/probe.o
+
+dir:
+	mkdir -p ebpf/bin
 
 build:
 	go build -o bin/main .
