@@ -23,14 +23,14 @@ func main() {
 			{
 				Section:          "classifier/egress",
 				EbpfFuncName:     "egress_cls_func",
-				Ifname:           "wlp3s0",
+				Ifname:           "wlp3s0", // change this to the interface connected to the internet
 				NetworkDirection: manager.Egress,
 				SkipLoopback:     true, // ignore loopback traffic
 			},
 			{
 				Section:          "classifier/ingress",
 				EbpfFuncName:     "ingress_cls_func",
-				Ifname:           "wlp3s0",
+				Ifname:           "wlp3s0", // change this to the interface connected to the internet
 				NetworkDirection: manager.Ingress,
 			},
 		},
