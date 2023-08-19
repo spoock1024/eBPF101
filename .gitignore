@@ -88,7 +88,7 @@ fabric.properties
 *.so
 *.dylib
 
-# Test binary, built with `go test -c`
+# Test binary, built with `go send_signal -c`
 *.test
 
 # Output of the go coverage tool, specifically when used with LiteIDE
