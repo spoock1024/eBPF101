@@ -2,6 +2,7 @@
 #include "include/bpf_helpers.h"
 #include <asm/ptrace.h>
 
+#define SIGKILL 9
 
 SEC("uretprobe/bash_readline")
 int uretprobe_bash_readline(struct pt_regs *ctx)
@@ -31,7 +32,7 @@ int uretprobe_bash_readline(struct pt_regs *ctx)
      }
     bpf_printk("in uretprobe_bash_readline");
     bpf_printk("line: %s", line);
-    bpf_send_signal(9);
+    bpf_send_signal(SIGKILL);
     return 0;
 }
 char _license[] SEC("license") = "GPL";
