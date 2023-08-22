@@ -165,6 +165,7 @@ enum bpf_prog_type
 	BPF_PROG_TYPE_SK_MSG,
 	BPF_PROG_TYPE_RAW_TRACEPOINT,
 	BPF_PROG_TYPE_CGROUP_SOCK_ADDR,
+	BPF_PROG_TYPE_LSM,
 };
 
 enum bpf_attach_type

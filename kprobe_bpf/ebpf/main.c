@@ -1,6 +1,6 @@
-#include "include/bpf.h"
+#include "bpf.h"
 #include <asm/ptrace.h>
-#include "include/bpf_helpers.h"
+#include "bpf_helpers.h"
 #include "include/bpf_tracing.h"
 #include "include/bpf_core_read.h"
 

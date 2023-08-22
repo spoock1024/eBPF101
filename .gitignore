@@ -94,7 +94,7 @@ fabric.properties
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 
-# Dependency directories (remove the comment below to include it)
+# Dependency directories (remove the comment below to bpf it)
 # vendor/
 bin
 # Go workspace file
