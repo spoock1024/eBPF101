@@ -2,10 +2,7 @@ module perf_event
 
 go 1.20
 
-require (
-	github.com/gojue/ebpfmanager v0.4.3
-	github.com/sirupsen/logrus v1.8.1
-)
+require github.com/gojue/ebpfmanager v0.4.3
 
 require (
 	github.com/avast/retry-go v3.0.0+incompatible // indirect
