@@ -1,10 +1,8 @@
-#include <asm/ptrace.h>
-#include "bpf/bpf_helpers.h"
-#include "bpf/bpf_tracing.h"
-#include "bpf/bpf_core_read.h"
+#include "include/bpf.h"
+#include "include/bpf_helpers.h"
 
 SEC("lsm/socket_connect")
-int restrict_connect(struct pt_regs *ctx)
+int restrict_connect(void *ctx)
 {
     bpf_printk("restrict_connect\n");
     return 0;
