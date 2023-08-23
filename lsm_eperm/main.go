@@ -39,6 +39,7 @@ func main() {
 
 	// Create a folder to trigger the probes
 	if err, output := trigger(); err != nil {
+		// expected output is "ping: connect: Operation not permitted"
 		fmt.Println(err, output)
 	}
 	// Close the manager
