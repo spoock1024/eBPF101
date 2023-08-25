@@ -1,4 +1,4 @@
-module perf_event_map
+module perf_event_heap
 
 go 1.20
 
