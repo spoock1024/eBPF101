@@ -38,6 +38,8 @@ int kprobe_vfs_mkdir(void *ctx)
         bpf_printk("map start\n");
         u32 key = 1;
         u32 value = 42;
+        u32 newKey = 3;
+        u32 newValue = 3;
         void *outer_map = bpf_map_lookup_elem(&OuterM, &key);
         if (outer_map == NULL) {
                 bpf_printk("map lookup failed\n");
@@ -45,6 +47,7 @@ int kprobe_vfs_mkdir(void *ctx)
         }
 
         bpf_printk("map rewrite,mkdir (vfs hook point)\n");
+        bpf_map_update_elem(outer_map, &newKey, &newValue, BPF_ANY);
         bpf_map_update_elem(outer_map, &key, &value, BPF_ANY);
         return 0;
 

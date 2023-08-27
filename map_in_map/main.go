@@ -88,11 +88,6 @@ func main() {
 
 	fmt.Println("successfully started, head over to /sys/kernel/debug/tracing/trace_pipe")
 
-	// Create a folder to trigger the probes
-	if err := trigger(); err != nil {
-		fmt.Println(err)
-	}
-
 	sharedCache, found, err := m.GetMap("InnerM")
 	if err != nil || !found {
 		fmt.Println(fmt.Errorf("error:%v, %s", err, "couldn't find shared_cache1 in m1"))
