@@ -3,22 +3,6 @@
 #include "bpf/bpf_helpers.h"
 #include "bpf/bpf_tracing.h"
 
-/* map #0 */
-//struct inner_a {
-//	__uint(type, BPF_MAP_TYPE_HASH);
-//	__type(key, u32);
-//	__type(value, int);
-//	__uint(max_entries, 10);
-//} InnerM SEC(".maps");
-//
-//
-//struct {
-//	__uint(type, BPF_MAP_TYPE_HASH_OF_MAPS);
-//	__uint(max_entries, 10);
-//	__uint(key_size, sizeof(u32));
-//} OuterM SEC(".maps");
-
-
 struct bpf_map_def SEC("maps/InnerM") InnerM = {
     .type = BPF_MAP_TYPE_HASH,
     .key_size = sizeof(u32),
