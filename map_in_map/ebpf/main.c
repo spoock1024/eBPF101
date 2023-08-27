@@ -47,8 +47,14 @@ int kprobe_vfs_mkdir(void *ctx)
         }
 
         bpf_printk("map rewrite,mkdir (vfs hook point)\n");
-        bpf_map_update_elem(outer_map, &newKey, &newValue, BPF_ANY);
-        bpf_map_update_elem(outer_map, &key, &value, BPF_ANY);
+        int result = bpf_map_update_elem(outer_map, &newKey, &newValue, BPF_ANY);
+        if (result == 0) {
+            bpf_printk("add new key-value pair\n");
+        }
+        result = bpf_map_update_elem(outer_map, &key, &value, BPF_ANY);
+        if (result == 0) {
+            bpf_printk("rewrite key-value pair\n");
+        }
         return 0;
 
 };
