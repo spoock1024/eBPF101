@@ -4,6 +4,7 @@
 - [eBPF开发入门](https://blog.spoock.com/2023/08/30/eBPF-dev/)
 - [eBPF代码入门](https://blog.spoock.com/2023/08/14/eBPF-Helloworld/)
 - [eBPF中常见的事件类型](https://blog.spoock.com/2023/08/19/eBPF-Hook/)
+- [bpf2go原理和使用介绍](https://blog.spoock.com/2023/09/02/eBPF-bpf2go/)
 
 ### 开源项目
 - [vArmor is a cloud native container sandbox based on LSM](https://github.com/bytedance/vArmor-ebpf)
