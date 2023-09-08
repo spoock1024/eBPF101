@@ -14,6 +14,7 @@
 - [KubeArmor-Cloud-native Runtime Security Enforcement System](https://github.com/kubearmor/KubeArmor)
 - [datadog-agent](https://github.com/DataDog/datadog-agent)
 - [kyverno-Kubernetes Native Policy Management](https://github.com/kyverno/kyverno)
+- [polaris-Validation of best practices in your Kubernetes clusters](https://github.com/FairwindsOps/polaris)
 
 ### 学习资料
 - [云原生安全攻防｜使用eBPF逃逸容器技术分析与实践](https://mp.weixin.qq.com/s/Psqy3X3VdUPga7f2cnct1g)
