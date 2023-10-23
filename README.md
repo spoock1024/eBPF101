@@ -6,6 +6,7 @@
 - [eBPF常见文件介绍](https://blog.spoock.com/2023/08/13/eBPF-File/)
 - [eBPF中常见的事件类型](https://blog.spoock.com/2023/08/19/eBPF-Hook/)
 - [bpf2go原理和使用介绍](https://blog.spoock.com/2023/09/02/eBPF-bpf2go/)
+- [perf_event和ringbuf原理介绍和使用](https://blog.spoock.com/2023/09/16/eBPF-event/)
 
 ### 开源项目
 - [vArmor is a cloud native container sandbox based on LSM](https://github.com/bytedance/vArmor-ebpf)
