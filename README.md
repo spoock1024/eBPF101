@@ -23,6 +23,7 @@
 - [datadog的eBPF安全检测机制分析](https://www.cnxct.com/how-does-datadog-use-ebpf-in-runtime-security/)
 - [eBPF应用程序开发：快人一步](https://mp.weixin.qq.com/s/rSvTIDCIhhJnBQ5UIpmG8A)
 - [eBPF网络程序新手指南 By Liz Rice](https://www.cnxct.com/a-guide-to-ebpf-programming-for-networking/)
+- [The Beginner's Guide to eBPF](https://github.com/lizrice/ebpf-beginners)
 
 #### PPT
  - [从0到1打造云原生容器沙箱vArmor](./slides/从0到1打造云原生容器沙箱vArmor.pdf)
